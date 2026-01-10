@@ -75,6 +75,7 @@ async function foodPartnerRegister(req, res) {
   });
 }
 async function foodPartnerLogin(req, res) {
+  console.log(req.body);
   const { email, password } = req.body;
   const foodPartner = await foodPartnerModel.findOne({ email });
   if (!foodPartner) {
